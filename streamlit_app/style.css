@@ -22,7 +22,9 @@ body {
     background: radial-gradient(circle at 50% -20%, #1e293b 0%, #0f172a 100%);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-weight: 700;
     letter-spacing: -0.025em;
 }
@@ -45,14 +47,20 @@ h1, h2, h3 {
     font-size: 1.2rem;
 }
 
-.custom-card {
+/* Replaced .custom-card with a selector that targets Streamlit containers directly */
+[data-testid="stVerticalBlockBorderWrapper"]>div>[data-testid="stVerticalBlock"]>[data-testid="stVerticalBlock"]>div[data-testid="stVerticalBlock"] {
     background: var(--card-bg);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 1.5rem;
     padding: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card {
+    /* Kept for backward compatibility but reduced to zero-impact if empty */
+    display: none;
 }
 
 .custom-card:hover {
