@@ -13,7 +13,8 @@ st.set_page_config(
 )
 
 # Load custom CSS
-with open('style.css') as f:
+css_path = os.path.join(os.path.dirname(__file__), 'style.css')
+with open(css_path) as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 # Helper functions for analysis
@@ -39,8 +40,10 @@ def analyze_signatures(text):
 @st.cache_resource
 def load_artifacts():
     try:
-        model = joblib.load('lr_model.joblib')
-        vectorizer = joblib.load('tfidf_vectorizer.joblib')
+        model_path = os.path.join(os.path.dirname(__file__), 'lr_model.joblib')
+        vectorizer_path = os.path.join(os.path.dirname(__file__), 'tfidf_vectorizer.joblib')
+        model = joblib.load(model_path)
+        vectorizer = joblib.load(vectorizer_path)
         return model, vectorizer
     except:
         return None, None
