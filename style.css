@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary: #6366f1;
+    --primary-glow: rgba(99, 102, 241, 0.5);
+    --secondary: #14b8a6;
+    --bg-dark: #0f172a;
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --human-accent: #2dd4bf;
+    --ai-accent: #a78bfa;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+}
+
+.stApp {
+    background: radial-gradient(circle at 50% -20%, #1e293b 0%, #0f172a 100%);
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+.main-header {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.main-header h1 {
+    font-size: 3.5rem;
+    background: linear-gradient(to right, #818cf8, #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.main-header p {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+}
+
+.custom-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+}
+
+.stTextArea textarea {
+    background: rgba(15, 23, 42, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 1rem !important;
+    color: white !important;
+    font-size: 1.1rem !important;
+}
+
+.stButton button {
+    background: linear-gradient(to right, #6366f1, #8b5cf6) !important;
+    border: none !important;
+    border-radius: 0.75rem !important;
+    padding: 0.75rem 2rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    transition: all 0.3s ease !important;
+}
+
+.stButton button:hover {
+    box-shadow: 0 0 20px var(--primary-glow) !important;
+    transform: scale(1.02) !important;
+}
+
+.result-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.ai-badge {
+    background: rgba(167, 139, 250, 0.2);
+    color: var(--ai-accent);
+    border: 1px solid var(--ai-accent);
+}
+
+.human-badge {
+    background: rgba(45, 212, 191, 0.2);
+    color: var(--human-accent);
+    border: 1px solid var(--human-accent);
+}
+
+.stat-label {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
