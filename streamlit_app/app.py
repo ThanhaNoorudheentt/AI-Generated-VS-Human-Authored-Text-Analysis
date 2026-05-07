@@ -45,7 +45,8 @@ def load_artifacts():
         model = joblib.load(model_path)
         vectorizer = joblib.load(vectorizer_path)
         return model, vectorizer
-    except:
+    except Exception as e:
+        st.error(f"Error loading artifacts: {e}")
         return None, None
 
 model, vectorizer = load_artifacts()

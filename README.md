@@ -34,7 +34,8 @@ The project utilizes the **Human ChatGPT Comparison Corpus (HC3)**, a multi-doma
 ## Repository Structure
 - `ai_human.ipynb`: The complete pipeline from data loading to evaluation.
 - `streamlit_app/`: Application folder containing `app.py`, `style.css`, and model artifacts.
-- `requirements.txt`: Dependencies for local and cloud deployment.
+- `requirements.txt`: Dependencies for local and cloud deployment.￼
+
 - `README.md`: Project documentation.
 
 ## Conclusion
